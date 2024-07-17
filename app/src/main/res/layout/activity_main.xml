@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<com.example.kidsdrawingapp.DrawingView
+    android:id="@+id/drawing_view"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/bg_drawing_view_layout"
+    app:layout_constraintBottom_toTopOf="@id/ll_paint_colors"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    />
+
+
+    <LinearLayout
+        android:id="@+id/ll_paint_colors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/ib_brush"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/drawing_view"
+>
+        <ImageButton
+
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/pallet_normal"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:scaleType="fitXY"
+            android:tag="@color/yellow"
+            android:onClick="paintClicked"
+            android:background="@color/yellow"
+            tools:ignore="MissingConstraints" />
+        <ImageButton
+
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/pallet_normal"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:scaleType="fitXY"
+            android:onClick="paintClicked"
+            android:tag="@color/skin"
+            android:background="@color/skin"
+            tools:ignore="MissingConstraints" />
+        <ImageButton
+
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/pallet_normal"
+            android:scaleType="fitXY"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:onClick="paintClicked"
+            android:tag="@color/black"
+            android:background="@color/black"
+            tools:ignore="MissingConstraints" />
+        <ImageButton
+
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/pallet_normal"
+            android:scaleType="fitXY"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:onClick="paintClicked"
+            android:tag="@color/red"
+            android:background="@color/red"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/pallet_normal"
+            android:scaleType="fitXY"
+            android:tag="@color/green"
+            android:minHeight="48dp"
+            android:onClick="paintClicked"
+            android:minWidth="48dp"
+            android:background="@color/green"
+            tools:ignore="MissingConstraints" />
+        <ImageButton
+
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/pallet_normal"
+            android:scaleType="fitXY"
+            android:tag="@color/lollipop"
+            android:onClick="paintClicked"
+            android:background="@color/lollipop"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            tools:ignore="MissingConstraints" />
+        <ImageButton
+
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/pallet_normal"
+            android:scaleType="fitXY"
+            android:tag="@color/blue"
+            android:onClick="paintClicked"
+            android:background="@color/blue"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/pallet_normal"
+            android:scaleType="fitXY"
+            android:tag="@color/random"
+            android:minHeight="48dp"
+            android:onClick="paintClicked"
+            android:minWidth="48dp"
+            android:background="@color/random"
+            tools:ignore="MissingConstraints"/>
+
+        <ImageButton
+
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/pallet_normal"
+            android:scaleType="fitXY"
+            android:tag="@color/white"
+            android:minHeight="48dp"
+            android:onClick="paintClicked"
+            android:minWidth="48dp"
+            android:background="@color/white"
+            tools:ignore="MissingConstraints"/>
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ib_brush"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_brush"
+        android:scaleType="fitXY"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        app:layout_constraintTop_toBottomOf="@id/ll_paint_colors"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
