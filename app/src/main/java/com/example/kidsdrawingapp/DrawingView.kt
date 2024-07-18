@@ -16,12 +16,19 @@ class DrawingView(context: Context,attrs:AttributeSet):View(context,attrs) {
     private var mCanvasPaint: Paint? =null
     private var mBrushSize :Float= 0.toFloat()
     private var color= Color.BLACK
-    private var canvas: Canvas? =null
+    private var canvas : Canvas? =null
     private var mPaths= ArrayList<CustomPath>()
+    private var mUndoPath =ArrayList<CustomPath>()
 
 
     init {
         setUpDrawing()
+    }
+    fun onClickUndo() {
+        if (mPaths.size > 0){
+            mUndoPath.add(mPaths.removeAt(mPaths.size-1))
+            invalidate()
+        }
     }
     private fun setUpDrawing(){
         mDrawPaint = Paint()
@@ -38,7 +45,7 @@ class DrawingView(context: Context,attrs:AttributeSet):View(context,attrs) {
         super.onSizeChanged(w, h, oldw, oldh)
         mCanvasBitmap= Bitmap.createBitmap(w,h,Bitmap.Config.ARGB_8888)
     }
-// add ? TO Canvas if fails
+
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         canvas.drawBitmap(mCanvasBitmap!!,0f,0f,mCanvasPaint)

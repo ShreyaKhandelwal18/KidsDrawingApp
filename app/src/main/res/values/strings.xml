@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Drawing App</string>
+    <string name="color_pallet">color pallet</string>
+    <string name="gallery">Gallery</string>
+    <string name="undo">Undo</string>
+    <string name="brush">Brush</string>
+    <string name="save">Save</string>
+    <string name="please_wait">Please Wait...</string>
 </resources>
